@@ -1,0 +1,32 @@
+page_name: "It Beats"
+page_description: "Adds distant heartbeat SFX to the Red Mountain region."
+
+heartbeat_groupName: "Heartbeat"
+period_name: "Period (sec)"
+period_description: |
+  How often the heart will beat.
+  Sound file is 2s long, so I wouldn't advise setting it lower than that.
+  Min = 0.01
+
+  !! To apply this change you'll need to restart the game or run "reloadlua" command in the console !!
+maxOffset_name: "Random Offset (sec)"
+maxOffset_description: |
+  Random offset [0;N] which is added to the Period value.
+  Set it to 0 to disable it.
+  Min = 0
+
+volume_groupName: "Volume"
+masterVolume_name: "Master Volume (%)"
+masterVolume_description: "Can, in fact, be set to over 100."
+exteriorVolume_name: "Exterior Volume"
+genericInteriorVolume_name: "Generic Interior Volume"
+genericInteriorVolume_description: "Every interior but Dagoth Ur."
+dagothUrVolume_name: "Dagoth Ur Volume"
+facilityCavernVolume_name: "Facility Cavern Volume"
+facilityCavernVolume_description: "It's where you meet Dagoth Ur for the first time."
+akulakhansChamberVolume_name: "Akulakhan's Chamber Volume"
+
+debug_groupName: "Debug"
+enableMod_name: "Enable Mod"
+ignoreRegionRequirement_name: "Ignore Region Requirement"
+ignoreQuestRequirement_name: "Ignore Quest Requirement"

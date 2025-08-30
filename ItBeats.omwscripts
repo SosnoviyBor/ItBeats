@@ -1,0 +1,3 @@
+PLAYER: scripts/ItBeats/player.lua
+GLOBAL: scripts/ItBeats/global.lua
+MENU: scripts/ItBeats/settingsMenu.lua
