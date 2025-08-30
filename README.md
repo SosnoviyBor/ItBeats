@@ -15,13 +15,18 @@ Whenever you’re in the Red Mountain region (effectively, inside the Ghostfence
 The closer you get to the Heart, the louder the heartbeat becomes.  
 The mod differentiates **five** separate player locations:
 
-1. Akulakhan’s Chamber
-2. Dagoth Ur, Facility Cavern (the room where you meet Dagoth Ur for the first time)
-3. The rest of Dagoth Ur (the citadel)
-4. All other interiors in the region
-5. The region’s exterior
+1. **Akulakhan’s Chamber** - current cell name: `Akulakhan’s Chamber`  
+2. **Dagoth Ur, Facility Cavern** (the room where you first meet Dagoth Ur) - current cell name: `Dagoth Ur, Facility Cavern`  
+3. **The rest of Dagoth Ur (the citadel)** - current cell name starts with `Dagoth Ur`  
+4. **Generic interior** - current cell is an interior and at least one door leads to a Red Mountain region exterior cell (connected interiors are checked the same way)  
+5. **Exterior** - current cell is exterior and located in the Red Mountain region  
 
 All these locations have separate volume configs and can be assigned different SFX (which might be used in the future).
+
+### And It Stops
+
+After you deal with the Heart, the heartbeat - obviously - stops.  
+Technically, the mod checks the player’s quests: if quest `C3_DestroyDagoth` is at stage 20 or higher, the heartbeat stops.
 
 <a id="custom_cell_blacklist"></a>
 
@@ -59,7 +64,10 @@ Install like any other OpenMW mod.
 The mod might add SFX to interiors leading to the Red Mountain region that aren’t actually there.  
 Check the [Custom Cell Blacklist section](#custom_cell_blacklist) for details.
 
-Otherwise, the mod should be compatible with anything.
+If something renames `Akulakhan’s Chamber` or `Dagoth Ur, Facility Cavern`, the mod will default to `Dagoth Ur`.  
+If something renames `Dagoth Ur` (the citadel) to something completely different that doesn’t contain `Dagoth Ur` in the name, the mod will default to `Generic interior`.
+
+**TL;DR:** Nothing game-breaking.
 
 ## Special Thanks
 
