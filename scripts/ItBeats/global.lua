@@ -1,9 +1,10 @@
 local types = require("openmw.types")
 local world = require("openmw.world")
 
-local exploredCells
+local exploredCells = {}
 
 local function cellCheck(cell)
+    -- cell:getAll() is available only in the global scope
     for _, door in pairs(cell:getAll(types.Door)) do
         local destCell = types.Door.destCell(door)
         if destCell == nil then goto continue end

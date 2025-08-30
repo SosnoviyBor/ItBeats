@@ -6,7 +6,9 @@ BlacklistedInteriors = {
     -- You can also message me on Nexus or wherever,
     -- so I could add your rules as an official support for the mods
 
-    -- Cell names are the same as on ingame map
-    ["cell name"] = true,
-    ["cell2 name"] = true,
+    -- Cell names should be the same as on ingame map,
+    -- but (and this is REALLY important) in full lowercase
+    -- And remember to uncomment the lines (ie remove -- at the start of the line)
+    -- ["cell name"] = true,
+    -- ["cell2 name"] = true,
 }

@@ -5,9 +5,10 @@ local core = require("openmw.core")
 require("scripts.ItBeats.heartbeat")
 require("scripts.ItBeats.cellBlacklist")
 
--- mod state
-InRM = false
-HeartIsDead = types.Player.quests(self)["C3_DestroyDagoth"].stage >= 20
+PlayerState = {
+    inRM = self.cell.region == "red mountain region",
+    heartIsDead = types.Player.quests(self)["C3_DestroyDagoth"].stage >= 20
+}
 
 local function updateCurrentRegion()
     local cell = self.cell
@@ -15,30 +16,28 @@ local function updateCurrentRegion()
     if BlacklistedInteriors[string.lower(cell.name)] then return end
 
     if cell.isExterior then
-        InRM = cell.region == "red mountain region"
+        PlayerState.inRM = cell.region == "red mountain region"
     else
         core.sendGlobalEvent("isCellInRM", cell.id)
     end
 end
 
-local function onQuestUpdate(questId, stage)
-    -- disable heartbeat after the Heart of Lorkhan is killed
-    if questId == "C3_DestroyDagoth" and stage == 20 then
-        HeartIsDead = true
-    end
-end
-
-local function updateInRM(status)
-    InRM = status
-end
-
-time.runRepeatedly(updateCurrentRegion, 1 * time.second, { type = time.SimulationTime })
+time.runRepeatedly(
+    updateCurrentRegion,
+    1 * time.second,
+    { type = time.SimulationTime })
 
 return {
     engineHandlers = {
-        onQuestUpdate = onQuestUpdate
+        onQuestUpdate = function (questId, stage)
+            if questId == "C3_DestroyDagoth" and stage == 20 then
+                PlayerState.heartIsDead = true
+            end
+        end
     },
     eventHandlers = {
-        updateInRM = updateInRM
+        updateInRM = function (status)
+            PlayerState.inRM = status
+        end
     }
 }
