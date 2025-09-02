@@ -15,11 +15,11 @@ Whenever you’re in the Red Mountain region (effectively, inside the Ghostfence
 The closer you get to the Heart, the louder the heartbeat becomes.  
 The mod differentiates **five** separate player locations:
 
-1. **Akulakhan’s Chamber** - current cell name: `Akulakhan’s Chamber`  
-2. **Dagoth Ur, Facility Cavern** (the room where you first meet Dagoth Ur) - current cell name: `Dagoth Ur, Facility Cavern`  
-3. **The rest of Dagoth Ur (the citadel)** - current cell name starts with `Dagoth Ur`  
-4. **Generic interior** - current cell is an interior and at least one door leads to a Red Mountain region exterior cell (connected interiors are checked the same way)  
-5. **Exterior** - current cell is exterior and located in the Red Mountain region  
+1. **Akulakhan’s Chamber** - current cell name: `Akulakhan’s Chamber`
+2. **Dagoth Ur, Facility Cavern** (the room where you first meet Dagoth Ur) - current cell name: `Dagoth Ur, Facility Cavern`
+3. **The rest of Dagoth Ur (the citadel)** - current cell name starts with `Dagoth Ur`
+4. **Generic interior** - current cell is an interior and at least one door leads to a Red Mountain region exterior cell (connected interiors are checked the same way)
+5. **Exterior** - current cell is exterior and located in the Red Mountain region
 
 All these locations have separate volume configs and can be assigned different SFX (which might be used in the future).
 
@@ -71,7 +71,9 @@ If something renames `Dagoth Ur` (the citadel) to something completely different
 
 ## Special Thanks
 
-**[RedFurryDemon](https://next.nexusmods.com/profile/RedFurryDemon/mods?gameId=100)** and everyone else who worked on the [Heartthrum](https://www.nexusmods.com/morrowind/mods/47178) mod - clear inspiration for this project.
+- **[RedFurryDemon](https://next.nexusmods.com/profile/RedFurryDemon/mods?gameId=100)** and everyone else who worked on the [Heartthrum](https://www.nexusmods.com/morrowind/mods/47178) mod - clear inspiration for this project
+- **[RedFurryDemon](https://next.nexusmods.com/profile/RedFurryDemon/mods?gameId=100)** and **[Fredrik Jonasson](https://www.youtube.com/user/FredrikJComposer/videos)** - heartbeat SFX from [Heartthrum](https://www.nexusmods.com/morrowind/mods/47178)
+- **[ralyncoyote](https://www.deviantart.com/ralyncoyote/gallery)** - making the [artwork](https://www.deviantart.com/ralyncoyote/art/Heart-of-Lorkhan-911155714) I used as my mod's cover
 
 ## Consider Also
 

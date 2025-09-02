@@ -8,27 +8,29 @@ local sectionHeartbeat = storage.playerSection("SettingsItBeats_heartbeat")
 local sectionVolume = storage.playerSection("SettingsItBeats_volume")
 local sectionDebug = storage.playerSection("SettingsItBeats_debug")
 
--- you can edit it!
 local filePath = "Sound/ItBeats/"
+-- placeholder for time when there will be made separate files for each location
+-- you can edit it!
+local sameFile = "heartbeat.ogg"
 local fileDataByCellType = {
     [EXTERIOR] = {
-        fileName = "Heartbeat.mp3",
+        fileName = sameFile,
         pitch = 1
     },
     [GENERIC_INTERIOR] = {
-        fileName = "Heartbeat.mp3",
+        fileName = sameFile,
         pitch = 1
     },
     [DAGOTH_UR] = {
-        fileName = "Heartbeat.mp3",
+        fileName = sameFile,
         pitch = 1
     },
     [FACILITY_CAVERN] = {
-        fileName = "Heartbeat.mp3",
+        fileName = sameFile,
         pitch = 1
     },
     [AKULAKHANS_CHAMBER] = {
-        fileName = "Heartbeat.mp3",
+        fileName = sameFile,
         pitch = 1
     },
 }
