@@ -71,7 +71,7 @@ If something renames `Dagoth Ur` (the citadel) to something completely different
 
 ## Special Thanks
 
-- **[RedFurryDemon](https://next.nexusmods.com/profile/RedFurryDemon/mods?gameId=100)** and everyone else who worked on the [Heartthrum](https://www.nexusmods.com/morrowind/mods/47178) mod - clear inspiration for this project
+- **[RedFurryDemon](https://next.nexusmods.com/profile/RedFurryDemon/mods?gameId=100)** and **[OperatorJack](https://www.nexusmods.com/morrowind/users/61791411?tab=user+files)** - making the [Heartthrum](https://www.nexusmods.com/morrowind/mods/47178) mod which inspired me to make this project
 - **[RedFurryDemon](https://next.nexusmods.com/profile/RedFurryDemon/mods?gameId=100)** and **[Fredrik Jonasson](https://www.youtube.com/user/FredrikJComposer/videos)** - heartbeat SFX from [Heartthrum](https://www.nexusmods.com/morrowind/mods/47178)
 - **[ralyncoyote](https://www.deviantart.com/ralyncoyote/gallery)** - making the [artwork](https://www.deviantart.com/ralyncoyote/art/Heart-of-Lorkhan-911155714) I used as my mod's cover
 

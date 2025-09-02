@@ -21,7 +21,7 @@ I.Settings.registerGroup {
             description = 'period_description',
             renderer = 'number',
             integer = false,
-            default = 5,
+            default = 3,
             min = .01,
         },
         {
