@@ -2,18 +2,15 @@ page_name: "It Beats"
 page_description: "Adds distant heartbeat SFX to the Red Mountain region."
 
 heartbeat_groupName: "Heartbeat"
-period_name: "Period (sec)"
-period_description: |
+tempo_name: "Tempo (sec)"
+tempo_description: |
   How often the heart will beat.
-  Sound file is 2s long, so I wouldn't advise setting it lower than that.
-  Min = 0.01
 
   !! To apply this change you'll need to restart the game or run "reloadlua" command in the console !!
 maxOffset_name: "Random Offset (sec)"
 maxOffset_description: |
-  Random offset [0;N] which is added to the Period value.
+  Random offset [0;N] which is added to the Tempo value.
   Set it to 0 to disable it.
-  Min = 0
 
 volume_groupName: "Volume"
 masterVolume_name: "Master Volume (%)"

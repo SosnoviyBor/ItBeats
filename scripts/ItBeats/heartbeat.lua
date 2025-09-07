@@ -9,30 +9,14 @@ local sectionVolume = storage.playerSection("SettingsItBeats_volume")
 local sectionDebug = storage.playerSection("SettingsItBeats_debug")
 
 local filePath = "Sound/ItBeats/"
--- placeholder for time when there will be made separate files for each location
 -- you can edit it!
-local sameFile = "heartbeat.ogg"
-local fileDataByCellType = {
-    [EXTERIOR] = {
-        fileName = sameFile,
-        pitch = 1
-    },
-    [GENERIC_INTERIOR] = {
-        fileName = sameFile,
-        pitch = 1
-    },
-    [DAGOTH_UR] = {
-        fileName = sameFile,
-        pitch = 1
-    },
-    [FACILITY_CAVERN] = {
-        fileName = sameFile,
-        pitch = 1
-    },
-    [AKULAKHANS_CHAMBER] = {
-        fileName = sameFile,
-        pitch = 1
-    },
+-- i'll improve the procedure later
+local fileByCellType = {
+    [EXTERIOR] =            "1. Outside.wav",
+    [GENERIC_INTERIOR] =    "2. Inside_buildings.wav",
+    [DAGOTH_UR] =           "3. Dungeon.wav",
+    [FACILITY_CAVERN] =     "4. Room_before_Hall_with_Heart.wav",
+    [AKULAKHANS_CHAMBER] =  "5. Hall_with_heart.wav",
 }
 
 local function getVolume(cellType)
@@ -51,13 +35,12 @@ end
 local function doHeartbeat()
     local cellType = GetRMCellType(self.cell)
     local volume = getVolume(cellType)
-    local fileName = fileDataByCellType[cellType].fileName
-    local pitch = fileDataByCellType[cellType].pitch
+    local fileName = fileByCellType[cellType]
 
     ambient.playSoundFile(
         filePath .. fileName, {
             volume = volume,
-            pitch = pitch,
+            pitch = 1,
         })
 end
 
@@ -74,5 +57,5 @@ end
 
 time.runRepeatedly(
     startHeartbeat,
-    sectionHeartbeat:get("period"),
+    sectionHeartbeat:get("tempo"),
     { type = time.SimulationTime })

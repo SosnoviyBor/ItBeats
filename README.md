@@ -78,3 +78,4 @@ If something renames `Dagoth Ur` (the citadel) to something completely different
 ## Consider Also
 
 - **[Red Mountain Tremors OpenMW](https://www.nexusmods.com/morrowind/mods/53637)** by [AbbaddoN33](https://next.nexusmods.com/profile/AbbaddoN33?gameId=100) and [Demanufacturer87](https://next.nexusmods.com/profile/Demanufacturer87?gameId=100) - Adds tremors in the Red Mountain and Molag Amur regions.
+- **[Dynamic Ambient Visual Effects](https://www.nexusmods.com/morrowind/mods/55572)** by [taitechnic](https://www.nexusmods.com/morrowind/users/201374414) - Adds blight clouds and lightning over Red Mountain, visible at far distance, lightning strikes at Dwemer ruins and many many other things.

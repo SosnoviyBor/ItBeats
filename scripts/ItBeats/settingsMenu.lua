@@ -2,7 +2,7 @@ local I = require('openmw.interfaces')
 
 I.Settings.registerPage {
     key = 'ItBeats',
-    l10n = 'ItBeats',
+    l10n = 'ItBeats_Settings',
     name = 'page_name',
     description = 'page_description',
 }
@@ -10,15 +10,15 @@ I.Settings.registerPage {
 I.Settings.registerGroup {
     key = 'SettingsItBeats_heartbeat',
     page = 'ItBeats',
-    l10n = 'ItBeats',
+    l10n = 'ItBeats_Settings',
     name = 'heartbeat_groupName',
     order = 1,
     permanentStorage = true,
     settings = {
         {
-            key = 'period',
-            name = 'period_name',
-            description = 'period_description',
+            key = 'tempo',
+            name = 'tempo_name',
+            description = 'tempo_description',
             renderer = 'number',
             integer = false,
             default = 3,
@@ -39,7 +39,7 @@ I.Settings.registerGroup {
 I.Settings.registerGroup {
     key = 'SettingsItBeats_volume',
     page = 'ItBeats',
-    l10n = 'ItBeats',
+    l10n = 'ItBeats_Settings',
     name = 'volume_groupName',
     order = 2,
     permanentStorage = true,
@@ -101,7 +101,7 @@ I.Settings.registerGroup {
 I.Settings.registerGroup {
     key = 'SettingsItBeats_debug',
     page = 'ItBeats',
-    l10n = 'ItBeats',
+    l10n = 'ItBeats_Settings',
     name = 'debug_groupName',
     order = 100,
     permanentStorage = true,
