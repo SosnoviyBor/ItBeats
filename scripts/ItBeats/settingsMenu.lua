@@ -16,12 +16,27 @@ I.Settings.registerGroup {
     permanentStorage = true,
     settings = {
         {
+            key = 'sfx',
+            name = 'sfx_name',
+            description = 'sfx_description',
+            renderer = 'select',
+            argument = {
+                l10n = "ItBeats_Settings",
+                items = {
+                    "It Beats",
+                    "Heartthrum HoF",
+                    "Heartthrum HoF Vanilla",
+                },
+            },
+            default = "It Beats"
+        },
+        {
             key = 'tempo',
             name = 'tempo_name',
             description = 'tempo_description',
             renderer = 'number',
             integer = false,
-            default = 3,
+            default = 2,
             min = .01,
         },
         {
@@ -50,7 +65,7 @@ I.Settings.registerGroup {
             description = 'masterVolume_description',
             renderer = 'number',
             integer = false,
-            default = 100,
+            default = 50,
             min = 0,
         },
         {
@@ -58,7 +73,7 @@ I.Settings.registerGroup {
             name = 'exteriorVolume_name',
             renderer = 'number',
             integer = false,
-            default = 75,
+            default = 100,
             min = 0,
         },
         {
@@ -67,7 +82,7 @@ I.Settings.registerGroup {
             description = 'genericInteriorVolume_description',
             renderer = 'number',
             integer = false,
-            default = 75,
+            default = 60,
             min = 0,
         },
         {
@@ -75,7 +90,7 @@ I.Settings.registerGroup {
             name = 'dagothUrVolume_name',
             renderer = 'number',
             integer = false,
-            default = 100,
+            default = 60,
             min = 0,
         },
         {
@@ -92,7 +107,7 @@ I.Settings.registerGroup {
             name = 'akulakhansChamberVolume_name',
             renderer = 'number',
             integer = false,
-            default = 150,
+            default = 125,
             min = 0,
         },
     }

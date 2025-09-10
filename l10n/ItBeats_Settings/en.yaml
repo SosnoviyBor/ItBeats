@@ -2,6 +2,8 @@ page_name: "It Beats"
 page_description: "Adds distant heartbeat SFX to the Red Mountain region."
 
 heartbeat_groupName: "Heartbeat"
+sfx_name: "SFX Group"
+sfx_description: "Heartthrum SFX uses same files for all 5 locations."
 tempo_name: "Tempo (sec)"
 tempo_description: |
   How often the heart will beat.
@@ -13,7 +15,7 @@ maxOffset_description: |
   Set it to 0 to disable it.
 
 volume_groupName: "Volume"
-masterVolume_name: "Master Volume (%)"
+masterVolume_name: "Master Volume"
 masterVolume_description: "Can, in fact, be set to over 100."
 exteriorVolume_name: "Exterior Volume"
 genericInteriorVolume_name: "Generic Interior Volume"

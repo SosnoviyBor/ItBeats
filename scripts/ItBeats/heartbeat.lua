@@ -8,15 +8,30 @@ local sectionHeartbeat = storage.playerSection("SettingsItBeats_heartbeat")
 local sectionVolume = storage.playerSection("SettingsItBeats_volume")
 local sectionDebug = storage.playerSection("SettingsItBeats_debug")
 
-local filePath = "Sound/ItBeats/"
+local soundsFolder = "Sound/ItBeats/"
 -- you can edit it!
--- i'll improve the procedure later
-local fileByCellType = {
-    [EXTERIOR] =            "1. Outside.wav",
-    [GENERIC_INTERIOR] =    "2. Inside_buildings.wav",
-    [DAGOTH_UR] =           "3. Dungeon.wav",
-    [FACILITY_CAVERN] =     "4. Room_before_Hall_with_Heart.wav",
-    [AKULAKHANS_CHAMBER] =  "5. Hall_with_heart.wav",
+local files = {
+    ["It Beats"] = {
+        [EXTERIOR] =            "1. Mountain.wav",
+        [GENERIC_INTERIOR] =    "2. Interiors.wav",
+        [DAGOTH_UR] =           "3. Dagoth Ur.wav",
+        [FACILITY_CAVERN] =     "4. Facility Cavern.wav",
+        [AKULAKHANS_CHAMBER] =  "5. Akulakhans Chamber.wav",
+    },
+    ["Heartthrum HoF"] = {
+        [EXTERIOR] =            "Heartthrum - Heart of Lorkhan.wav",
+        [GENERIC_INTERIOR] =    "Heartthrum - Heart of Lorkhan.wav",
+        [DAGOTH_UR] =           "Heartthrum - Heart of Lorkhan.wav",
+        [FACILITY_CAVERN] =     "Heartthrum - Heart of Lorkhan.wav",
+        [AKULAKHANS_CHAMBER] =  "Heartthrum - Heart of Lorkhan.wav",
+    },
+    ["Heartthrum HoF Vanilla"] = {
+        [EXTERIOR] =            "Heartthrum - Heart of Lorkhan (vanilla.wav",
+        [GENERIC_INTERIOR] =    "Heartthrum - Heart of Lorkhan (vanilla.wav",
+        [DAGOTH_UR] =           "Heartthrum - Heart of Lorkhan (vanilla.wav",
+        [FACILITY_CAVERN] =     "Heartthrum - Heart of Lorkhan (vanilla.wav",
+        [AKULAKHANS_CHAMBER] =  "Heartthrum - Heart of Lorkhan (vanilla.wav",
+    }
 }
 
 local function getVolume(cellType)
@@ -29,16 +44,17 @@ local function getVolume(cellType)
         [AKULAKHANS_CHAMBER] =  sectionVolume:get("akulakhansChamberVolume"),
     }
     local masterVolume = sectionVolume:get("masterVolume")
-    return volumeByCellType[cellType] / 50 * masterVolume / 100
+    return volumeByCellType[cellType] / 50 * masterVolume / 20
 end
 
 local function doHeartbeat()
     local cellType = GetRMCellType(self.cell)
     local volume = getVolume(cellType)
-    local fileName = fileByCellType[cellType]
+    local sfxGroup = sectionHeartbeat:get("sfx")
+    local filePath = files[sfxGroup][cellType]
 
     ambient.playSoundFile(
-        filePath .. fileName, {
+        soundsFolder .. filePath, {
             volume = volume,
             pitch = 1,
         })
